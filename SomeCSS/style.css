@@ -1,0 +1,18 @@
+#Govno {
+  text-align: center;
+  padding: 75px;
+  margin: 15px;
+  border: 10px solid #2F3841;
+  border-radius: 100px;
+  height: 300px;
+  font-size: 50px;
+  font-weight: 900;
+  transform:scale(0.5);
+  transition: 3s all;
+
+
+}
+
+#Govno:hover {
+  transform:rotate(180deg);
+}
