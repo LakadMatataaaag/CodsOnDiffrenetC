@@ -1,0 +1,34 @@
+package com.company;
+
+
+import javazoom.jl.decoder.JavaLayerException;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import javazoom.jl.player.Player;
+
+public class Main
+{
+
+
+
+
+
+
+
+
+
+    public static void main(String[] args) {
+        try {
+            FileInputStream f = new FileInputStream("111.mp3");
+            try {
+                Player player = new Player(f);
+                player.play();
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
