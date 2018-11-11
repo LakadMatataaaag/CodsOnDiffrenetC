@@ -1,59 +1,51 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
-
+#define n 2
+#define m 3
+#define g 3
+#define l 2
+#define p 2
+#define o 2
 int main()
 {
-    int N, M, N1, M1, i, j, k, n;
-    int A[n][n];
-    int B[n][n];
-    int C[n][n];
-    printf("Введите количество строк первой матрицы: ");
-    scanf("%d", &N);
-    printf("Введите количество столбцов первой матрицы: ");
-    scanf("%d", &M);
+    int u = 0;
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int h = 0;
+    int t = 0;
+    int A[n][m];
+    int B[g][l];
+    int C[p][o];
     printf("Заполните матрицу A:\n");
-    for (i = 0; i < N; i++)
-        for (j = 0; j < M; j++)
+    for (i = 0; i < n; i++)
+        for (j = 0; j < m; j++)
         {
             scanf("%d", &A[i][j]);
         }
-    printf("Введите количество строк второй матрицы: ");
-    scanf("%d", &N1);
-    printf("Введите количество столбцов второй матрицы: ");
-    scanf("%d", &M1);
-    if (M != N1)
-        printf("Эти матрицы невозможно перемножить");
-    else
-    {
-            printf("Заполните матрицу B:\n");
-            for (i = 0; i < N1; i++)
-                for (j = 0; j < M1; j++)
-                {
-                    scanf("%d", &B[i][j]);
-                }
-            for (i = 0; i < N; i++)
-                for (j = 0; j < M; j++)
-                {
-                    C[i][j] = 0;
-                    for (k = 0; k < M1; k++)
-                        C[i][j] += A[i][k] * B[k][j];
-                }
-    
-        printf("\nПри умножении получаем матрицу порядка %dx%d\n", N, M1);
-        for (i = 0; i < N; i++)
+    printf("Заполните матрицу B:\n");
+    for (h = 0; h < g; h++)
+        for (t = 0; t < l; t++)
         {
-            for (j = 0; j < M1; j++)
+            scanf("%d", &B[h][t]);
+        }
+    for (i = 0; i <= n; i++)
+        for (j = 0; j <= m; j++)
+        {
+            C[i][j] = 0;
+            for (k = 0; k <= l; k++)
+                C[i][j] += A[i][k] * B[k][j];
+        }
+    
+    for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < l; j++)
             printf("%d ", C[i][j]);
         printf("\n");
         }
-    }
+            
+
+    
+        
     
     
     return 0;
