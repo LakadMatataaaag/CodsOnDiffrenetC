@@ -18,7 +18,7 @@ int main()
             scanf("%d", &arr[i][j]);
             if(i == j)
             {
-                sumg += arr[i][j];
+                sumg += arr[i][j]; // Найдем сумму глвной диагонали
             }
         }
     }
@@ -32,9 +32,7 @@ int main()
             i = -1;
             if (sumv > sumdop)
             {
-
-                sumdop = sumv;
-
+                sumdop = sumv; // Найдем максимум среди верхних диагоналей 
             }
             sumv = 0;
         }
@@ -49,12 +47,12 @@ int main()
             j = -1;
             if (sumn > sumdop2)
             {
-                sumdop2 = sumn;
+                sumdop2 = sumn; // Найдем максимум среди нижних диагоналей
             }
             sumn = 0;
         }
     }
-    if (sumg > sumdop && sumg > sumdop2)
+    if (sumg > sumdop && sumg > sumdop2) // Сравним значения и выведем Ответ
     {
         printf("Сумма на главной диагонали = %d\nMax Sum на верхней побочной = %d\nMax sum на нижней побочной = %d\n", sumg, sumdop, sumdop2);
         printf("Ответ - %d\n", sumg);
