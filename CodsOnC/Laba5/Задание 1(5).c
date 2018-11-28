@@ -1,24 +1,35 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-char *_strdup (const char *str)
+char *_strdup(const char *str)
 {
-  char *d = malloc (strlen (str) + 1);
-  if (d == NULL)
-  {
-    return NULL;
-  }
+	if (str == NULL)
+	{
+		return NULL;
+	}
 
-  strcpy (d,str);
-  return d;
+	char *strc = 0;
+	strc = (char*)malloc((strlen(str) + 1) * sizeof(char));
+
+	if (strc == NULL)
+	{
+		return NULL;
+	}
+
+	strcpy(strc, str);
+
+	return strc;
 }
+
 
 int main()
 {
-    char str [30];
-    scanf("%s", &str);
-    char *istr;
-    istr = _strdup (str);
-    printf ("Дубликат: %s\n", istr);
-    free (istr);
-    return 0;
+	
+	char str[12] = "some string";
+	char *str_c = _strdup(str);
+	printf("%s\n",(str_c));
+	free(str_c);
 }
+
+
